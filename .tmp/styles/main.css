@@ -1,5 +1,5 @@
 body {
-  background: #fafafa;
+  background: url("/images/mapBlur.png");
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #F4F4F4;
   font-family: "Futura-Medium";
@@ -24,26 +24,49 @@ img {
   display: block;
 }
 
-.fp-controlArrow.fp-prev {
+.navRight {
+  width: 15px;
+  position: fixed;
+  right: -20px;
+  top: 20%;
+}
+
+.slide img {
+  width: auto;
+  max-height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*.fp-controlArrow.fp-prev {
   left: 40px;
-  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   width: 150px;
   height: 80px;
-  background: url("/images/arrow.png") !important;
-  border: none !important;
+  background: url('/images/arrow.png') !important;
+  border:none !important;
+} */
+.fp-controlArrow.fp-prev {
+  border-color: transparent rgba(255, 255, 255, 0.2) transparent transparent !important;
+  left: 30px !important;
 }
 
-.fp-section:nth-child(2n) {
-  background: url("/images/mapBlur.png");
+.fp-controlArrow.fp-next {
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.2) !important;
+  right: 30px !important;
 }
 
-.fp-section:nth-child(2n+1) {
-  background: url("/images/mapBlur2.png");
+/* 1 VERSION */
+/*
+.fp-section:nth-child(2n){
+    background: url('/images/mapBlur.png');
 }
-
+.fp-section:nth-child(2n+1){
+    background: url('/images/mapBlur2.png');
+  // background: #171717;
+}*/
 .firstFrame {
-  background: #ddb4ea !important;
+  background: url("/images/nuageOverlay.png");
 }
 
 .line {
@@ -114,6 +137,25 @@ img {
 
 video {
   width: 100%;
+}
+
+.Contact {
+  width: 50%;
+  margin: auto;
+}
+
+#email {
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  color: #F4F4F4;
+}
+
+#commentaire {
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  color: #F4F4F4;
 }
 
 @-webkit-keyframes levitate {
