@@ -1,0 +1,9 @@
+{
+  "name": "luminaria-site",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.0",
+    "fullpage.js": "~2.6.5"
+  },
+  "devDependencies": {}
+}
