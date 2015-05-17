@@ -1,20 +1,56 @@
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  color: #F4F4F4;
+  font-family: "Futura-Medium";
+  text-align: justify;
 }
 
-h1 {
-  width: 200px;
-  margin: auto;
+@font-face {
+  font-family: 'Futura-Medium';
+  src: url("font/Futura-Medium.eot");
+  src: url("font/Futura-Medium.eot?#iefix") format("embedded-opentype"), url("font/Futura-Medium.woff2") format("woff2"), url("font/Futura-Medium.woff") format("woff"), url("font/Futura-Medium.ttf") format("truetype"), url("font/Futura-Medium.svg#Futura-Medium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+#frontTitle {
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  display: block;
+}
+
+.fp-controlArrow.fp-prev {
+  left: 40px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 150px;
+  height: 80px;
+  background: url("/images/arrow.png") !important;
+  border: none !important;
+}
+
+.fp-section:nth-child(2n) {
+  background: url("/images/mapBlur.png");
+}
+
+.fp-section:nth-child(2n+1) {
+  background: url("/images/mapBlur2.png");
 }
 
 .firstFrame {
-  background: #ddb4ea;
+  background: #ddb4ea !important;
 }
 
-.section {
-  width: 80%;
+.line {
+  background: white;
+  height: 2px;
+  width: 100%;
+  opacity: .2;
 }
 
 .imageDiv {
@@ -34,6 +70,7 @@ h1 {
 
 .imgContainer {
   position: relative;
+  z-index: 3;
 }
 .imgContainer :nth-child(1) {
   -webkit-animation: levitate 2s infinite;
@@ -46,20 +83,23 @@ h1 {
   opacity: .8;
   bottom: 0;
   max-width: 70%;
-  z-index: -2;
+  z-index: -1;
 }
 .imgContainer :nth-child(3) {
   -webkit-animation: levitateWidth 2s infinite;
   position: absolute;
   left: 15%;
   bottom: -10%;
-  z-index: -2;
+  z-index: -1;
 }
 
 .textDiv {
-  float: right;
-  margin-right: 10%;
+  float: left;
   width: 40%;
+}
+
+.textLeft {
+  margin-left: 10%;
 }
 
 .trailer {

@@ -1,21 +1,57 @@
 body {
     background: #fafafa;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+    color: #F4F4F4;
+    font-family: "Futura-Medium";
+    text-align:justify;
 }
-h1{
-    width: 200px;
-    margin: auto;
+@font-face {
+  font-family: 'Futura-Medium';
+  src: url('font/Futura-Medium.eot');
+  src: url('font/Futura-Medium.eot?#iefix') format('embedded-opentype'),
+       url('font/Futura-Medium.woff2') format('woff2'),
+       url('font/Futura-Medium.woff') format('woff'),
+       url('font/Futura-Medium.ttf') format('truetype'),
+       url('font/Futura-Medium.svg#Futura-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#frontTitle{
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto ;
+  //  color:white;
+    //font-size: em;
+    //font-size: 0%;
 }
 img{
-    //width: 50%;
+     display: block;
+}
+.fp-controlArrow.fp-prev {
+  left: 40px;
+  transform: rotate(90deg);
+  width: 150px;
+  height: 80px;
+  background: url('/images/arrow.png') !important;
+  border:none !important;
+}
+.fp-section:nth-child(2n){
+    background: url('/images/mapBlur.png');
+}
+.fp-section:nth-child(2n+1){
+    background: url('/images/mapBlur2.png');
+  // background: #171717;
 }
 .firstFrame{
-    background:#ddb4ea;
+    background:#ddb4ea !important;
 }
-.section{
-  //  margin: 20px;   
-  width: 80%; 
+.line{
+    background: white;
+    height:2px;
+    width: 100%;
+    opacity: .2;
 }
 .imageDiv{
     float:left;
@@ -34,6 +70,7 @@ img{
  .imgContainer{
    // height:300px;
    position: relative;
+   z-index: 3;
     :nth-child(1) {
     -webkit-animation: levitate 2s infinite;  
     max-width: 60%; 
@@ -45,7 +82,7 @@ img{
         opacity: .8;
         bottom: 0;
         max-width: 70%;
-        z-index: -2;
+        z-index: -1;
 
     }
     :nth-child(3) {
@@ -54,24 +91,26 @@ img{
     position: absolute;
     left: 15%;
     bottom: -10%;
-    z-index: -2;
+    z-index: -1;
     } 
     
  }
 
 
 .textDiv{
-    float:right;
-    margin-right: 10%;
+    float:left;
     width:40%;
+}
+.textLeft{
+    margin-left: 10%;
 }
 .trailer{
     width:80%;
     margin: auto;
     h3{
          margin-left: auto;
-    margin-right: auto;
-    width: 0px;
+         margin-right: auto;
+     width: 0px;
     }
 }
 video{
