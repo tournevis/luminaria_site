@@ -1,27 +1,85 @@
-body {
-  background: url("/images/mapBlur.png");
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #F4F4F4;
-  font-family: "Futura-Medium";
-  text-align: justify;
-}
-
+/***** FONT *****/
 @font-face {
-  font-family: 'Futura-Medium';
-  src: url("font/Futura-Medium.eot");
-  src: url("font/Futura-Medium.eot?#iefix") format("embedded-opentype"), url("font/Futura-Medium.woff2") format("woff2"), url("font/Futura-Medium.woff") format("woff"), url("font/Futura-Medium.ttf") format("truetype"), url("font/Futura-Medium.svg#Futura-Medium") format("svg");
+  font-family: 'Futura-CondensedExtraBold';
+  src: url("/font/Futura-CondensedExtraBold.eot");
+  src: url("/font/Futura-CondensedExtraBold.eot?#iefix") format("embedded-opentype"), url("/font/Futura-CondensedExtraBold.woff2") format("woff2"), url("/font/Futura-CondensedExtraBold.woff") format("woff"), url("/font/Futura-CondensedExtraBold.ttf") format("truetype"), url("/font/Futura-CondensedExtraBold.svg#Futura-CondensedExtraBold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Futura-CondensedMedium';
+  src: url("/font/Futura-CondensedMedium.eot");
+  src: url("/font/Futura-CondensedMedium.eot?#iefix") format("embedded-opentype"), url("/font/Futura-CondensedMedium.woff2") format("woff2"), url("/font/Futura-CondensedMedium.woff") format("woff"), url("/font/Futura-CondensedMedium.ttf") format("truetype"), url("/font/Futura-CondensedMedium.svg#Futura-CondensedMedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura-Medium';
+  src: url("/font/Futura-Medium.eot");
+  src: url("/font/Futura-Medium.eot?#iefix") format("embedded-opentype"), url("/font/Futura-Medium.woff2") format("woff2"), url("/font/Futura-Medium.woff") format("woff"), url("/font/Futura-Medium.ttf") format("truetype"), url("/font/Futura-Medium.svg#Futura-Medium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura-MediumItalic';
+  src: url("/font/Futura-MediumItalic.eot");
+  src: url("/font/Futura-MediumItalic.eot?#iefix") format("embedded-opentype"), url("/font/Futura-MediumItalic.woff2") format("woff2"), url("/font/Futura-MediumItalic.woff") format("woff"), url("/font/Futura-MediumItalic.ttf") format("truetype"), url("/font/Futura-MediumItalic.svg#Futura-MediumItalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir-Med';
+  src: url("/font/AvenirNextLTPro-MediumCn_gdi.eot");
+  src: url("/font/AvenirNextLTPro-MediumCn_gdi.eot?#iefix") format("embedded-opentype"), url("/font/AvenirNextLTPro-MediumCn_gdi.woff") format("woff"), url("/font/AvenirNextLTPro-MediumCn_gdi.ttf") format("truetype"), url("/font/AvenirNextLTPro-MediumCn_gdi.svg#AvenirNextLTPro-MediumCn") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0-10FFFF;
+}
+@font-face {
+  font-family: 'Avenir-Reg';
+  src: url("/font/AvenirNextLTPro-Regular_gdi.eot");
+  src: url("/font/AvenirNextLTPro-Regular_gdi.eot?#iefix") format("embedded-opentype"), url("/font/AvenirNextLTPro-Regular_gdi.woff") format("woff"), url("/font/AvenirNextLTPro-Regular_gdi.ttf") format("truetype"), url("/font/AvenirNextLTPro-Regular_gdi.svg#AvenirNextLTPro-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0-10FFFF;
+}
+/* GLOBAL  */
+body {
+  background: url("/images/mapBlur2.png");
+  color: #F4F4F4;
+  text-align: justify;
+  font-family: "Avenir-Reg";
+}
+
+h3 {
+  font-family: "Avenir-Med";
+  letter-spacing: 5px;
+  font-size: 1.5em;
+}
+
+video {
+  width: 100%;
+}
+
+img {
+  display: block;
+}
+
+textarea {
+  resize: none;
+}
+textarea :focus {
+  outline: none;
+}
+
 #frontTitle {
   width: 400px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-img {
-  display: block;
+  max-width: 80%;
 }
 
 .navRight {
@@ -34,6 +92,7 @@ img {
 .slide img {
   width: auto;
   max-height: 80%;
+  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -67,6 +126,7 @@ img {
 }*/
 .firstFrame {
   background: url("/images/nuageOverlay.png");
+  width: 100%;
 }
 
 .line {
@@ -93,6 +153,7 @@ img {
 
 .imgContainer {
   position: relative;
+  margin-top: 10%;
   z-index: 3;
 }
 .imgContainer :nth-child(1) {
@@ -118,6 +179,7 @@ img {
 
 .textDiv {
   float: left;
+  position: relative;
   width: 40%;
 }
 
@@ -128,15 +190,11 @@ img {
 .trailer {
   width: 80%;
   margin: auto;
-}
-.trailer h3 {
-  margin-left: auto;
-  margin-right: auto;
-  width: 0px;
-}
-
-video {
-  width: 100%;
+  /*  h3{
+         margin-left: auto;
+         margin-right: auto;
+     width: 0px;
+    }*/
 }
 
 .Contact {
@@ -158,6 +216,52 @@ video {
   color: #F4F4F4;
 }
 
+#duo {
+  width: 80%;
+  margin-left: auto;
+}
+
+.equipe {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.arthur {
+  position: relative;
+  float: left;
+  width: 40%;
+}
+.arthur margi
+img {
+  -webkit-border-radius: 50px;
+  max-width: 100px;
+}
+
+.tony {
+  position: relative;
+  float: left;
+}
+.tony img {
+  -webkit-border-radius: 50px;
+  max-width: 100px;
+}
+
+@media (max-width: 600px) {
+  .imageDiv {
+    position: absolute;
+    opacity: 0.8;
+    left: 50px;
+    width: 400px;
+  }
+
+  .textDiv {
+    float: left;
+    width: 80%;
+    margin: 10%;
+    z-index: 15;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  }
+}
 @-webkit-keyframes levitate {
   0% {
     -webkit-transform: translateY(-15px);
