@@ -1,38 +1,19 @@
 /***** FONT *****/
 @font-face {
-  font-family: 'Futura-CondensedExtraBold';
-  src: url("/font/Futura-CondensedExtraBold.eot");
-  src: url("/font/Futura-CondensedExtraBold.eot?#iefix") format("embedded-opentype"), url("/font/Futura-CondensedExtraBold.woff2") format("woff2"), url("/font/Futura-CondensedExtraBold.woff") format("woff"), url("/font/Futura-CondensedExtraBold.ttf") format("truetype"), url("/font/Futura-CondensedExtraBold.svg#Futura-CondensedExtraBold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Futura-CondensedMedium';
-  src: url("/font/Futura-CondensedMedium.eot");
-  src: url("/font/Futura-CondensedMedium.eot?#iefix") format("embedded-opentype"), url("/font/Futura-CondensedMedium.woff2") format("woff2"), url("/font/Futura-CondensedMedium.woff") format("woff"), url("/font/Futura-CondensedMedium.ttf") format("truetype"), url("/font/Futura-CondensedMedium.svg#Futura-CondensedMedium") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Futura-Medium';
-  src: url("/font/Futura-Medium.eot");
-  src: url("/font/Futura-Medium.eot?#iefix") format("embedded-opentype"), url("/font/Futura-Medium.woff2") format("woff2"), url("/font/Futura-Medium.woff") format("woff"), url("/font/Futura-Medium.ttf") format("truetype"), url("/font/Futura-Medium.svg#Futura-Medium") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Futura-MediumItalic';
-  src: url("/font/Futura-MediumItalic.eot");
-  src: url("/font/Futura-MediumItalic.eot?#iefix") format("embedded-opentype"), url("/font/Futura-MediumItalic.woff2") format("woff2"), url("/font/Futura-MediumItalic.woff") format("woff"), url("/font/Futura-MediumItalic.ttf") format("truetype"), url("/font/Futura-MediumItalic.svg#Futura-MediumItalic") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: 'Avenir-Med';
   src: url("/font/AvenirNextLTPro-MediumCn_gdi.eot");
   src: url("/font/AvenirNextLTPro-MediumCn_gdi.eot?#iefix") format("embedded-opentype"), url("/font/AvenirNextLTPro-MediumCn_gdi.woff") format("woff"), url("/font/AvenirNextLTPro-MediumCn_gdi.ttf") format("truetype"), url("/font/AvenirNextLTPro-MediumCn_gdi.svg#AvenirNextLTPro-MediumCn") format("svg");
   font-weight: 500;
   font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0-10FFFF;
+}
+@font-face {
+  font-family: 'AvenirNextLTPro-DemiIt';
+  src: url("/font/AvenirNextLTPro-DemiIt_gdi.eot");
+  src: url("/font/AvenirNextLTPro-DemiIt_gdi.eot?#iefix") format("embedded-opentype"), url("/font/AvenirNextLTPro-DemiIt_gdi.woff") format("woff"), url("/font/AvenirNextLTPro-DemiIt_gdi.ttf") format("truetype"), url("/font/AvenirNextLTPro-DemiIt_gdi.svg#AvenirNextLTPro-DemiIt") format("svg");
+  font-weight: 200;
+  font-style: italic;
   font-stretch: normal;
   unicode-range: U+0-10FFFF;
 }
@@ -45,12 +26,20 @@
   font-stretch: normal;
   unicode-range: U+0-10FFFF;
 }
+@font-face {
+  font-family: 'AvenirNextLTPro-UltLtCn';
+  src: url("/font/AvenirNextLTPro-UltLtCn_gdi.eot");
+  src: url("/font/AvenirNextLTPro-UltLtCn_gdi.eot?#iefix") format("embedded-opentype"), url("/font/AvenirNextLTPro-UltLtCn_gdi.woff") format("woff"), url("/font/AvenirNextLTPro-UltLtCn_gdi.ttf") format("truetype"), url("/font/AvenirNextLTPro-UltLtCn_gdi.svg#AvenirNextLTPro-UltLtCn") format("svg");
+  font-weight: 275;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0-10FFFF;
+}
 /* GLOBAL  */
 body {
   background: url("/images/background.png"), black;
   background-size: cover;
   color: #F4F4F4;
-  text-align: justify;
   font-family: "Avenir-Reg";
 }
 
@@ -58,6 +47,11 @@ h3 {
   font-family: "Avenir-Med";
   letter-spacing: 5px;
   font-size: 1.5em;
+}
+
+h4 {
+  font-family: 'AvenirNextLTPro-UltLtCn';
+  letter-spacing: 5px;
 }
 
 video {
@@ -93,13 +87,6 @@ img {
   -webkit-animation: levitate 2s infinite;
 }
 
-.navRight {
-  width: 15px;
-  position: fixed;
-  right: -20px;
-  top: 20%;
-}
-
 .slide img {
   width: auto;
   max-height: 80%;
@@ -108,33 +95,30 @@ img {
   margin-right: auto;
 }
 
-/*.fp-controlArrow.fp-prev {
-  left: 40px;
-  transform: rotate(90deg);
-  width: 150px;
-  height: 80px;
-  background: url('/images/arrow.png') !important;
-  border:none !important;
-} */
+.slideTitle {
+  text-align: center;
+}
+
 .fp-controlArrow.fp-prev {
   border-color: transparent rgba(255, 255, 255, 0.2) transparent transparent !important;
+  border-width: 29.5px 25px 29.5px 0 !important;
   left: 30px !important;
 }
 
 .fp-controlArrow.fp-next {
   border-color: transparent transparent transparent rgba(255, 255, 255, 0.2) !important;
+  border-width: 29.5px 0 29.5px 25px !important;
   right: 30px !important;
 }
 
-/* 1 VERSION */
-/*
-.fp-section:nth-child(2n){
-    background: url('/images/mapBlur.png');
+#mockuptext {
+  position: absolute;
+  width: 350px;
+  left: 50px;
+  bottom: -125px;
+  z-index: -1;
 }
-.fp-section:nth-child(2n+1){
-    background: url('/images/mapBlur2.png');
-  // background: #171717;
-}*/
+
 .line {
   background: black;
   height: 2px;
@@ -142,36 +126,22 @@ img {
   opacity: .5;
 }
 
-.imageDiv {
+.imgContainerPhare {
   position: absolute;
-  right: -150px;
-  top: 100px;
-}
-
-.imgContainer {
-  position: relative;
-  margin-top: 10%;
+  top: 150px;
+  right: -130px;
   z-index: 3;
-}
-.imgContainer :nth-child(1) {
   -webkit-animation: levitate 2s infinite;
   max-width: 100%;
-  position: relative;
 }
-.imgContainer :nth-child(2) {
+
+.imgContainerCapture {
   position: absolute;
-  left: -5%;
-  opacity: .8;
-  bottom: 0;
-  max-width: 70%;
-  z-index: -1;
-}
-.imgContainer :nth-child(3) {
-  -webkit-animation: levitateWidth 2s infinite;
-  position: absolute;
-  left: 15%;
-  bottom: -10%;
-  z-index: -1;
+  top: 150px;
+  right: -165px;
+  z-index: 3;
+  -webkit-animation: levitate 2s infinite;
+  max-width: 100%;
 }
 
 .textDiv {
@@ -190,6 +160,12 @@ img {
   padding-left: 50px;
   padding-right: 100px;
 }
+.textDiv h3 {
+  text-align: center;
+  margin-right: auto;
+  margin-top: 0;
+  font-weight: bold;
+}
 
 .textLeft {
   margin-left: 10%;
@@ -198,77 +174,85 @@ img {
 .trailer {
   width: 80%;
   margin: auto;
-  /*  h3{
-         margin-left: auto;
-         margin-right: auto;
-     width: 0px;
-    }*/
 }
 
 .Contact {
   width: 50%;
   margin: auto;
+  text-align: center;
 }
 
-#email {
-  background: transparent;
-  border: none;
-  font-size: 1.5em;
-  color: #F4F4F4;
+#equipe {
+  font-family: 'Avenir-Med';
+  margin-bottom: 40px;
+  font-size: 2em;
 }
 
-#commentaire {
-  background: transparent;
-  border: none;
-  font-size: 1.5em;
-  color: #F4F4F4;
-}
-
-#duo {
-  width: 80%;
+.rotateSquare {
+  position: relative;
   margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 50px;
+  height: 50px;
+  border: solid white;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: 0.5s ease-in-out;
 }
 
-.equipe {
-  width: 80%;
-  margin-left: 10%;
+.rotateSquare:hover {
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
 }
 
 .arthur {
   position: relative;
   float: left;
-  width: 40%;
-}
-.arthur img {
-  -webkit-border-radius: 50px;
-  max-width: 100px;
+  margin-left: 1%;
+  width: 49%;
+  text-align: center;
 }
 
 .tony {
   position: relative;
   float: left;
-}
-.tony img {
-  -webkit-border-radius: 50px;
-  max-width: 100px;
+  width: 49%;
+  border-right: solid rgba(255, 255, 255, 0.5);
+  text-align: center;
 }
 
-@media (max-width: 600px) {
-  .imageDiv {
-    position: absolute;
-    opacity: 0.8;
-    left: 50px;
-    width: 400px;
-  }
+.email {
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 
-  .textDiv {
-    float: left;
-    width: 80%;
+.logoeditis {
+  width: 350px;
+  margin: auto;
+  opacity: 0.9;
+}
+.logoeditis img {
+  width: 100%;
+}
+
+/*@media(max-width:600px){
+  .imageDiv{
+    position:absolute;
+    opacity:0.8;
+    left:50px;
+    width:400px;
+    }
+ .textDiv{
+    float:left;
+    width:80%;
     margin: 10%;
     z-index: 15;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px rgba(0,0,0,0.5);
   }
-}
+}*/
 @-webkit-keyframes levitate {
   0% {
     -webkit-transform: translateY(-15px);
@@ -292,5 +276,13 @@ img {
   100% {
     width: 35%;
     -webkit-transform: translateX(0px);
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
   }
 }
