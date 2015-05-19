@@ -47,7 +47,8 @@
 }
 /* GLOBAL  */
 body {
-  background: url("/images/mapBlur2.png");
+  background: url("/images/background.png"), black;
+  background-size: cover;
   color: #F4F4F4;
   text-align: justify;
   font-family: "Avenir-Reg";
@@ -67,11 +68,12 @@ img {
   display: block;
 }
 
-textarea {
-  resize: none;
-}
-textarea :focus {
-  outline: none;
+.blackoverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
 }
 
 #frontTitle {
@@ -79,7 +81,16 @@ textarea :focus {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 80%;
+  margin-top: 15%;
+}
+
+#arrow {
+  opacity: .5;
+  position: absolute;
+  left: 48%;
+  bottom: 5%;
+  width: 60px;
+  -webkit-animation: levitate 2s infinite;
 }
 
 .navRight {
@@ -124,31 +135,17 @@ textarea :focus {
     background: url('/images/mapBlur2.png');
   // background: #171717;
 }*/
-.firstFrame {
-  background: url("/images/nuageOverlay.png");
-  width: 100%;
-}
-
 .line {
-  background: white;
+  background: black;
   height: 2px;
   width: 100%;
-  opacity: .2;
+  opacity: .5;
 }
 
 .imageDiv {
-  float: left;
-  margin-left: 10%;
-  width: 40%;
-}
-
-#arrow {
-  opacity: .5;
   position: absolute;
-  left: 45%;
-  bottom: 5%;
-  width: 120px;
-  -webkit-animation: levitate 2s infinite;
+  right: -150px;
+  top: 100px;
 }
 
 .imgContainer {
@@ -158,7 +155,7 @@ textarea :focus {
 }
 .imgContainer :nth-child(1) {
   -webkit-animation: levitate 2s infinite;
-  max-width: 60%;
+  max-width: 100%;
   position: relative;
 }
 .imgContainer :nth-child(2) {
@@ -178,9 +175,20 @@ textarea :focus {
 }
 
 .textDiv {
-  float: left;
   position: relative;
-  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 360px;
+  height: 500px;
+  color: rgba(0, 0, 0, 0.8);
+  background: url("/images/backText.png");
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: 450px;
+  overflow: visible;
+  padding-top: 120px;
+  padding-left: 50px;
+  padding-right: 100px;
 }
 
 .textLeft {
@@ -231,8 +239,7 @@ textarea :focus {
   float: left;
   width: 40%;
 }
-.arthur margi
-img {
+.arthur img {
   -webkit-border-radius: 50px;
   max-width: 100px;
 }
