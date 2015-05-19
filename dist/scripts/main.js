@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#arrow").click(function(){$.fn.fullpage.moveSectionDown()}),$("#fullpage").fullpage({onLeave:function(a,n,o){$(this);1==a&&"down"==o?$(".blackoverlay").animate({opacity:.4},500):2==a&&"up"==o&&$(".blackoverlay").animate({opacity:0},500)}})});

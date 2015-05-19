@@ -1,7 +1,7 @@
 @import 'font';
 /* GLOBAL  */
 body {
-    background: url('/images/background.png'), black ;
+    background: url('../images/background.png'), black ;
     background-size:cover;
    // background-clip: border-box;
     //background: #fafafa;
@@ -116,7 +116,7 @@ img{
     width:360px;
     height:500px;
     color: rgba(0,0,0,0.8);
-    background: url('/images/backText.png');
+    background: url('../images/backText.png');
     background-repeat: no-repeat;
    background-clip: border-box;
   background-size: 450px;
