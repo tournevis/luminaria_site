@@ -24,6 +24,23 @@ video{
 img{
      display: block;
 }
+#fp-nav{
+
+
+  span{
+    background: #FFF !important;
+  }
+  a.active{
+    span{
+      background: rgba(255,255,255,0.5) !important;
+    }
+  }
+  a:active{
+    span{
+      background: rgba(255,255,255,0.8) !important;
+    }
+  }
+}
 .blackoverlay{
   position: fixed;
   width: 100%;

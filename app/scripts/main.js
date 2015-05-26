@@ -4,6 +4,7 @@ $( document ).ready(function() {
 	});
 
 	$('#fullpage').fullpage({
+		navigation: true,
 	        onLeave: function(index, nextIndex, direction){
 	            var leavingSection = $(this);
 
